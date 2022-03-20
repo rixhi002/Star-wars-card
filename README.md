@@ -1,0 +1,1 @@
+Just a website to show Star Wars Characters and their details using react and Star Wars API.

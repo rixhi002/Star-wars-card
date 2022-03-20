@@ -1,0 +1,155 @@
+@font-face {
+    font-family: StarWars;
+    src: url('./Starjedi.ttf');
+}
+@font-face {
+    font-family: Roboto;
+    src: url('./Roboto-Medium.ttf');
+}
+
+.body {
+    background-image: url("./backgroundImg.png");
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@keyframes loadingAnim {
+    0% {background-color: rgb(0, 0, 0); box-shadow: 0px 0px 5px rgb(248, 232, 0); color: rgb(248, 232, 0);}
+    50% {background-color: rgb(248, 232, 0); box-shadow: 0px 0px 5px rgb(0, 0, 0); color: rgb(0, 0, 0);}
+    100% {background-color: rgb(0, 0, 0); box-shadow: 0px 0px 5px rgb(248, 232, 0); color: rgb(248, 232, 0);}
+}
+
+.loading {
+    width: 100vw;
+    height: 100vh;
+    background: rgb(0, 0, 0);
+    position: absolute;
+    margin-top: -45px;
+    /* z-index: 1; */
+}
+.loadAnim {
+    /* display: none; */
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    /* background: linear-gradient(135deg, rgb(0, 0, 0), rgb(248,232,0)); */
+    animation-name: loadingAnim;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-family: StarWars;
+}
+.notLoading {
+    display: none;
+}
+
+.navbar {
+    background-color: rgb(59, 59, 59);
+    height: 45px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 15px rgb(248,232,0);
+}
+#heading {
+    font-size: 15px;
+    color: black;
+    font-family: StarWars;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(248, 232, 0);
+}
+
+.card {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40%;
+    width: 200px;
+    height: 200px;
+    flex-direction: column;
+    background: rgb(49, 49, 49);
+    box-shadow: 0px 0px 5px rgb(255, 238, 0);
+    border-radius: 20px;
+}
+.cardDetails {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgb(189, 189, 189);
+    /* text-shadow: 0px 0px 3px #000000; */
+    font-family: Roboto;
+    font-size: 12px;
+}
+
+#name {
+    margin-top: 35px;
+}
+.cardDetailHeading {
+    text-decoration: underline;
+    color:rgb(255, 255, 255);
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+}
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#button {
+    width: 150px;
+    height: 30px;
+    margin-top: 45px;
+    background: rgb(43, 42, 42);
+    color: rgb(54, 54, 54);
+    font-family: StarWars;
+    font-size: 10px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgba(255, 238, 4, 0.527);
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px yellow;
+}
+
+@media screen and (min-width: 400px) {
+    .loading {
+        margin-top: -75px;
+    }
+    .loadAnim {
+        width: 350px;
+        height: 350px;
+        font-size: 40px;
+    }
+    .navbar {
+        height: 75px;
+    }
+    #heading {
+        font-size: 35px;
+    }
+    .card {
+        margin-top: 5%;
+        width: 400px;
+        height: 400px;
+        box-shadow: 0px 0px 15px rgb(248, 232, 0);
+    }
+    .cardDetails {
+        font-size: 25px;
+    }
+    #name {
+        margin-top: 50px;
+    }
+    #button {
+        width: 350px;
+        height: 70px;
+        font-size: 20px;
+    }
+}
